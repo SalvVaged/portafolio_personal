@@ -15,13 +15,15 @@ class HobbyModel {
 class SectionModel {
   final String titulo;
   final String subtitulo;
-  final IconData icono;
+  final IconData? icono;
+  final String? iconoAsset;
   final VoidCallback onTap;
 
   const SectionModel({
     required this.titulo,
     required this.subtitulo,
-    required this.icono,
+    this.icono,
+    this.iconoAsset,
     required this.onTap,
   });
 }

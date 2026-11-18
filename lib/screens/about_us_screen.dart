@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 import '../widgets/custom_app_bar.dart';
-import '../widgets/footer_widget.dart';
+import '../widgets/footer_scroll_view.dart';
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});
@@ -9,20 +9,22 @@ class AboutUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(titulo: 'Sobre Nosotros'),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+      body: FooterScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
               Center(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
                     'assets/images/Facethefear.jpg',
                     height: 180,
-                    width: 180,
-                    fit: BoxFit.cover,
+                    width: 360,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -35,23 +37,26 @@ class AboutUsScreen extends StatelessWidget {
                 'operados por empleados altamente capacitados que garantizan la estabilidad de la producción '
                 'y el cumplimiento estricto de los protocolos de contención. Nuestra misión es simple: '
                 'proveer energía al mundo, sin importar el costo. Valoramos la eficiencia, la disciplina y el sacrificio. '
-                'En Lobotomy Corporation, cada empleado es un recurso; cada anomalía, una oportunidad. ' 
-                'Recuerde: la seguridad es responsabilidad de todos. ',
+                'En Lobotomy Corporation, cada empleado es un recurso; cada anomalía, una oportunidad. ',
                 style: TextStyle(fontSize: 15, height: 1.5, color: Theme.of(context).colorScheme.secondary),
               ),
               const SizedBox(height: 20),
-              _titulo(context, '¿Qué hago?'),
+              _titulo(context, '¿Porqué lo hacemos?'),
               Text(
-                'Desarrollo aplicaciones móviles multiplataforma con Flutter. '
-                'Además, diseño interfaces atractivas y funcionales, aplicando '
-                'buenas prácticas de programación y arquitectura limpia.',
+                'Como la Wing que se especializa en energía nosotros proveemos energía para la mayoría de Wings y nidos. ' 
+                'En L. Corporation la produción de energía es una prioridad con solo un objetivo: El futuro. '
+                'Cada anomalía contenida, cada turno completado y cada sacrificio realizado responde a una sola pregunta: '
+                '¿qué estarías dispuesto a entregar para que la humanidad siga adelante? Lo hacemos porque la energía no es un lujo, '
+                'es la base sobre la que se sostiene todo lo que conocemos. '
+                'y porque el miedo nunca ha detenido a la corporación. Lo hacemos por la ciudad y para la humanidad.',
                 style: TextStyle(fontSize: 15, height: 1.5, color: Theme.of(context).colorScheme.secondary),
               ),
-              const SizedBox(height: 30),
-              const FooterWidget(),
-            ],
+                  const SizedBox(height: 30),
+                ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

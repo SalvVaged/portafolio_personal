@@ -20,6 +20,8 @@ class AppTheme {
           backgroundColor: fondo,
           foregroundColor: secundario,
           elevation: 0,
+          scrolledUnderElevation: 0,
+          surfaceTintColor: Colors.transparent,
           centerTitle: true,
         ),
       );
