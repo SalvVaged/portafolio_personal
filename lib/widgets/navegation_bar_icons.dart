@@ -9,8 +9,8 @@ class NavegationBarIcons extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = [
       const _ItemNav.asset('assets/images/Risk_Aleph.webp', 'Anomalias', AppRoutes.abno),
-      const _ItemNav.asset('assets/images/Angela.png', 'Ejecutivos', AppRoutes.risk),
-      const _ItemNav.asset('assets/images/BongBong.png', 'Empleados', AppRoutes.comments),
+      const _ItemNav.asset('assets/images/Angela.png', 'Ejecutivos', AppRoutes.exe),
+      const _ItemNav.asset('assets/images/BongBong.png', 'Empleados', AppRoutes.employees),
     ];
 
     return Container(

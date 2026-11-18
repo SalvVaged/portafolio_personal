@@ -32,13 +32,13 @@ class SectionModel {
   });
 }
 
-class AbnoModel {
+class AppModel {              //he cambiado el nombre de esto como 3 veces porque agregaba mas cosas que seguian la misma formula :sob: aunque pereza pegar un emoji aca
   final String title;
   final String description;
   final IconData? icon;
   final String? iconAsset;
 
-  const AbnoModel({
+  const AppModel({
     required this.title,
     required this.description,
     this.icon,

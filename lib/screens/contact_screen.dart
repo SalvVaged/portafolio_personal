@@ -11,7 +11,7 @@ class ContactScreen extends StatelessWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         titulo: 'Firma del Desarrollador',
-        mostrarBotonContacto: false,
+        showButtonContact: false,
       ),
       body: FooterScrollView(
         slivers: [
@@ -33,7 +33,7 @@ class ContactScreen extends StatelessWidget {
                 color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
-              Text('Desarrollador Flutter',
+              Text('Estudiante Programación 3, Flutter',
                   style: TextStyle(fontSize: 16, color: Theme.of(context).colorScheme.secondary),
               ),
               const SizedBox(height: 30),

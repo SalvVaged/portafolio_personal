@@ -5,6 +5,8 @@ import '../screens/risk_screen.dart';
 import '../screens/comments_screen.dart';
 import '../screens/contact_screen.dart';
 import '../screens/abno_screen.dart';
+import '../screens/executives_screen.dart';
+import '../screens/employees_screen.dart';
 
 class AppRoutes {
   static const String home = '/';
@@ -13,6 +15,9 @@ class AppRoutes {
   static const String comments = '/comments';
   static const String contact = '/contact';
   static const String abno = '/abno';
+  static const String exe = '/exe';
+  static const String employees = '/employees';
+  
 
   static Map<String, WidgetBuilder> get rutas => {
         home: (_) => const HomeScreen(),
@@ -21,5 +26,7 @@ class AppRoutes {
         comments: (_) => const CommentsScreen(),
         contact: (_) => const ContactScreen(),
         abno: (_) => const AbnoScreen(),
+        exe: (_) => const ExeScreen(),
+        employees: (_) => const Employees()
       };
 }

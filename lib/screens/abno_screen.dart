@@ -6,43 +6,43 @@ import '../widgets/footer_scroll_view.dart';
 class AbnoScreen extends StatelessWidget {
   const AbnoScreen({super.key});
 
-  static const List<AbnoModel> _abno = [
-    AbnoModel(
+  static const List<AppModel> _abno = [
+    AppModel(
       title: 'O-01-04', //Queen of Hatred
       description:'"¡En nombre del Amor y la Justicia~ ¡Aquí llega la Chica Mágica!"',
       iconAsset: 'assets/images/QoH.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'D-02-107', //Ppodae
       description: '"¡TAN LINDO!"',
       iconAsset: 'assets/images/Ppodae.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'O-01-45', //Plague Doctor
       description: '"Te curaré, librándote de toda enfermedad y herida que poseas."',
       iconAsset: 'assets/images/Plague.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'O-06-20', //Nothing There
       description: 'Y las muchas cáscaras gritaron una palabra: "Manager"."',
       iconAsset: 'assets/images/Nothing_There.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'F-01-69', //Der Freischütz 
       description: '"Esta bala mágica realmente puede impactar a cualquiera, tal como dijiste."',
       iconAsset: 'assets/images/Magic_Bullet.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'O-02-56', //Punishing Bird
       description: '"La gente ha estado cometiendo pecados desde hace mucho tiempo. "¿Por qué cometen pecados, sabiendo que está mal?"',
       iconAsset: 'assets/images/PunishingBird.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'F-01-57', //Red Hooded Mercenary
       description: '"Colgaré su cabeza sobre mi cama. Solo entonces podré levantarme por la mañana sin tener una pesadilla."',
       iconAsset: 'assets/images/Red.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'O-03-03', //100 sins
       description: '"¿Es malo si una mala acción puede lograr cientos de buenas acciones? ¿Tienes que sentirte culpable por tener un poder para hacer el bien?"',
       iconAsset: 'assets/images/OneSin.webp',

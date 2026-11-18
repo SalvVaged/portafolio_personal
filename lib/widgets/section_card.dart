@@ -19,9 +19,9 @@ class SectionCard extends StatelessWidget {
       child: ListTile(
         contentPadding: const EdgeInsets.all(16),
         leading: CircleAvatar(
-          backgroundColor: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.35),
+          backgroundColor: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.90),
           child: section.iconAsset != null
-              ?Image.asset(section.iconAsset!, width: 28, height: 28, fit: BoxFit.scaleDown)
+              ?Image.asset(section.iconAsset!, width: 30, height: 30, fit: BoxFit.contain)
               :Icon(section.icon, color: Theme.of(context).colorScheme.secondary),
         ),
         title: Text(

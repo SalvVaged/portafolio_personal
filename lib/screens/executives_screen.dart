@@ -3,71 +3,76 @@ import '../models/proyect_model.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/footer_scroll_view.dart';
 
-class AbnoScreen extends StatelessWidget {
-  const AbnoScreen({super.key});
+class ExeScreen extends StatelessWidget {
+  const ExeScreen({super.key});
 
-  static const List<AbnoModel> _abno = [
-    AbnoModel(
+  static const List<AppModel> _abno = [
+    AppModel(
       title: 'X', //Ayin
       description:'Manager de la sede principal de L. Corp',
-      iconAsset: 'assets/images/QoH.webp',
+      iconAsset: 'assets/images/Ayin.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Angela',
       description: 'Secretaria de X',
-      iconAsset: 'assets/images/Ppodae.webp',
+      iconAsset: 'assets/images/AngelaSprite.png',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Malkuth',
-      description: 'Sephirah encargada del departamento de Control',
-      iconAsset: 'assets/images/Plague.webp',
+      description: 'Encargada del departamento de Control',
+      iconAsset: 'assets/images/Malkuth.webp',
     ),
-    AbnoModel(
+    AppModel(
+      title: 'Yesod',
+      description: 'Lider del equipo de Información',
+      iconAsset: 'assets/images/Yesod.webp',
+    ),
+    AppModel(
       title: 'Hod', 
-      description: 'Y las muchas cáscaras gritaron una palabra: "Manager"."',
-      iconAsset: 'assets/images/Nothing_There.webp',
+      description: 'Lider del departamento de Entrenamiento',
+      iconAsset: 'assets/images/Hod.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Netzach', 
-      description: 'Y las muchas cáscaras gritaron una palabra: "Manager"."',
-      iconAsset: 'assets/images/Nothing_There.webp',
+      description: 'Lider del departamento de Salud',
+      iconAsset: 'assets/images/Net.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Tiphereh A', 
-      description: 'Y las muchas cáscaras gritaron una palabra: "Manager"."',
-      iconAsset: 'assets/images/Nothing_There.webp',
+      description: 'Primer director de la zona Central',
+      iconAsset: 'assets/images/TipherethA.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Tiphereh B', 
-      description: 'Y las muchas cáscaras gritaron una palabra: "Manager"."',
-      iconAsset: 'assets/images/Nothing_There.webp',
+      description: 'Segundo director de la zona Central',
+      iconAsset: 'assets/images/TipherethB.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Chesed', 
-      description: '"Esta bala mágica realmente puede impactar a cualquiera, tal como dijiste."',
-      iconAsset: 'assets/images/Magic_Bullet.webp',
+      description: 'Lider del equipo de Bienestar Laboral',
+      iconAsset: 'assets/images/Chesed.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Gebura',
-      description: '"La gente ha estado cometiendo pecados desde hace mucho tiempo. "¿Por qué cometen pecados, sabiendo que está mal?"',
-      iconAsset: 'assets/images/PunishingBird.webp',
+      description: 'Lider del departamento de Seguridad',
+      iconAsset: 'assets/images/Gebura.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Hokma',
-      description: '"Colgaré su cabeza sobre mi cama. Solo entonces podré levantarme por la mañana sin tener una pesadilla."',
-      iconAsset: 'assets/images/Red.webp',
+      description: 'Manager del departamento de Registros',
+      iconAsset: 'assets/images/Hokma.webp',
     ),
-    AbnoModel(
+    AppModel(
       title: 'Binah',
-      description: '"¿Es malo si una mala acción puede lograr cientos de buenas acciones? ¿Tienes que sentirte culpable por tener un poder para hacer el bien?"',
-      iconAsset: 'assets/images/OneSin.webp',
+      description: 'Manager del departamento de Extracción',
+      iconAsset: 'assets/images/Binah.webp',
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Anomalias'),
+      appBar: const CustomAppBar(titulo: 'Ejecutivos'),
       body: FooterScrollView(
         slivers: [
           SliverToBoxAdapter(
@@ -111,15 +116,6 @@ class AbnoScreen extends StatelessWidget {
                 ),
                   ),
                 ),
-                Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text('1', style: TextStyle(color: Theme.of(context).colorScheme.secondary), //No se supone que funcione es una interpretación
-                  ),
-                  const SizedBox(width: 8),
-                  Icon(Icons.arrow_forward, color: Theme.of(context).colorScheme.secondary),
-                ],
-                  ),
                 const SizedBox(height: 16),
               ],
             ),

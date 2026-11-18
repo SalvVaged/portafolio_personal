@@ -3,12 +3,12 @@ import '../routes/app_routes.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String titulo;
-  final bool mostrarBotonContacto;
+  final bool showButtonContact;
 
   const CustomAppBar({
     super.key,
     required this.titulo,
-    this.mostrarBotonContacto = true,
+    this.showButtonContact = true,
   });
 
   @override
@@ -19,12 +19,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(titulo),
       actions: [
-        if (mostrarBotonContacto)
+        if (showButtonContact)
           IconButton(
             tooltip: 'Firma del desarrollador',
             icon: const Icon(Icons.code),
-            onPressed: () =>
-                Navigator.pushNamed(context, AppRoutes.contact),
+            onPressed: () => Navigator.pushNamed(context, AppRoutes.contact),
           ),
       ],
     );
