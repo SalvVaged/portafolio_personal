@@ -2,11 +2,11 @@ import 'package:material_ui/material_ui.dart';
 import '../models/proyect_model.dart';
 
 class SectionCard extends StatelessWidget {
-  final SectionModel seccion;
+  final SectionModel section;
 
   const SectionCard({
     super.key,
-    required this.seccion,
+    required this.section,
   });
 
   @override
@@ -20,12 +20,12 @@ class SectionCard extends StatelessWidget {
         contentPadding: const EdgeInsets.all(16),
         leading: CircleAvatar(
           backgroundColor: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.35),
-          child: seccion.iconAsset != null
-              ?Image.asset(seccion.iconAsset!, width: 28, height: 28, fit: BoxFit.scaleDown)
-              :Icon(seccion.icon, color: Theme.of(context).colorScheme.secondary),
+          child: section.iconAsset != null
+              ?Image.asset(section.iconAsset!, width: 28, height: 28, fit: BoxFit.scaleDown)
+              :Icon(section.icon, color: Theme.of(context).colorScheme.secondary),
         ),
         title: Text(
-          seccion.title,
+          section.title,
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -33,14 +33,14 @@ class SectionCard extends StatelessWidget {
           ),
         ),
         subtitle: Text(
-          seccion.subtitle,
+          section.subtitle,
           style: TextStyle(
             fontSize: 14,
             color: Theme.of(context).colorScheme.secondary,
           ),
         ),
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-        onTap: seccion.onTap,
+        onTap: section.onTap,
       ),
     );
   }

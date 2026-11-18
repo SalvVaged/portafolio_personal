@@ -10,16 +10,16 @@ class AppRoutes {
   static const String home = '/';
   static const String aboutus = '/about-us';
   static const String risk = '/risk';
-  static const String comentarios = '/comentarios';
-  static const String contacto = '/contacto';
+  static const String comments = '/comments';
+  static const String contact = '/contact';
   static const String abno = '/abno';
 
   static Map<String, WidgetBuilder> get rutas => {
         home: (_) => const HomeScreen(),
         aboutus: (_) => const AboutUsScreen(),
         risk: (_) => const RiskScreen(),
-        comentarios: (_) => const CommentsScreen(),
-        contacto: (_) => const ContactScreen(),
+        comments: (_) => const CommentsScreen(),
+        contact: (_) => const ContactScreen(),
         abno: (_) => const AbnoScreen(),
       };
 }

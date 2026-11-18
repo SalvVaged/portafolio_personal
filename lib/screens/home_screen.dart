@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
             const NavegationBarIcons(),
             const SizedBox(height: 16),
             SectionCard(
-              seccion: SectionModel(
+              section: SectionModel(
                 title: 'Sobre Nosotros',
                 subtitle: 'Conoce un poco más sobre L. Corp',
                 iconAsset: 'assets/images/Ayin2.png',
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SectionCard(
-              seccion: SectionModel(
+              section: SectionModel(
                 title: 'Niveles de anomalias',
                 subtitle: 'Categorización de energía y manejo operativo',
                 iconAsset: 'assets/images/Risk_Zayin.webp',
@@ -65,12 +65,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SectionCard(
-              seccion: SectionModel(
+              section: SectionModel(
                 title: 'Comentarios',
                 subtitle:
                     'Lo que los previos empleados piensan del trabajo',
                 iconAsset: 'assets/images/Notes.png',
-                onTap: () => Navigator.pushNamed(context, AppRoutes.comentarios),
+                onTap: () => Navigator.pushNamed(context, AppRoutes.comments),
               ),
             ),
             const SizedBox(height: 16),

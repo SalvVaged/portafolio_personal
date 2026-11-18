@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             tooltip: 'Firma del desarrollador',
             icon: const Icon(Icons.code),
             onPressed: () =>
-                Navigator.pushNamed(context, AppRoutes.contacto),
+                Navigator.pushNamed(context, AppRoutes.contact),
           ),
       ],
     );

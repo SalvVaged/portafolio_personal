@@ -31,3 +31,17 @@ class SectionModel {
     required this.onTap,
   });
 }
+
+class AbnoModel {
+  final String title;
+  final String description;
+  final IconData? icon;
+  final String? iconAsset;
+
+  const AbnoModel({
+    required this.title,
+    required this.description,
+    this.icon,
+    this.iconAsset,
+  });
+}

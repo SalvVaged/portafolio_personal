@@ -1,16 +1,10 @@
 import 'package:material_ui/material_ui.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../widgets/custom_app_bar.dart';
+import '../widgets/footer_scroll_view.dart';
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({super.key});
 
-  Future<void> _abrir(String url) async {
-    final uri = Uri.parse(url);
-    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      throw Exception('No se pudo abrir $url');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +13,18 @@ class ContactScreen extends StatelessWidget {
         titulo: 'Firma del Desarrollador',
         mostrarBotonContacto: false,
       ),
-      body: SingleChildScrollView(
+      body: FooterScrollView(
+        slivers: [
+          SliverToBoxAdapter(
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
               const SizedBox(height: 20),
-              const CircleAvatar(
+              CircleAvatar(
+                backgroundColor: Theme.of(context).colorScheme.secondary,
                 radius: 60,
-                child: Icon(Icons.person, size: 60),
+                child: Icon(Icons.person, size: 60, color: Theme.of(context).colorScheme.surface),
               ),
               const SizedBox(height: 20),
               Text(
@@ -46,20 +43,18 @@ class ContactScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     ListTile(
-                      tileColor: Theme.of(context).colorScheme.primary,
-                      textColor: Theme.of(context).colorScheme.secondary,
-                      iconColor: Theme.of(context).colorScheme.secondary,
+                      tileColor: Theme.of(context).colorScheme.secondary,
+                      textColor: Theme.of(context).colorScheme.surface,
+                      iconColor: Theme.of(context).colorScheme.surface,
                       leading: const Icon(Icons.email),
                       title: const Text('rnoriega1506@gmail.com'),
-                      onTap: () => _abrir('rnoriega1506@gmail.com'),
                     ),
                     ListTile(
-                      tileColor: Theme.of(context).colorScheme.primary,
-                      textColor: Theme.of(context).colorScheme.secondary,
-                      iconColor: Theme.of(context).colorScheme.secondary,
+                      tileColor: Theme.of(context).colorScheme.secondary,
+                      textColor: Theme.of(context).colorScheme.surface,
+                      iconColor: Theme.of(context).colorScheme.surface,
                       leading: const Icon(Icons.phone),
                       title: const Text('+58 4123583059'),
-                      onTap: () => _abrir('tel:+58 4123583059'),
                     ),
                     ListTile(
                       tileColor: Theme.of(context).colorScheme.secondary,
@@ -67,7 +62,6 @@ class ContactScreen extends StatelessWidget {
                       iconColor: Theme.of(context).colorScheme.surface,
                       leading: const Icon(Icons.code),
                       title: const Text('github.com/SalvVaged'),
-                      onTap: () => _abrir('https://github.com/SalvVaged'),
                     ),
                   ],
                 ),
@@ -87,6 +81,8 @@ class ContactScreen extends StatelessWidget {
             ],
           ),
         ),
+          ),
+        ],
       ),
     );
   }

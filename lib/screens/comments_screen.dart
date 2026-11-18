@@ -11,17 +11,17 @@ class CommentsScreen extends StatefulWidget {
 
 class _CommentsScreenState extends State<CommentsScreen> {
   final TextEditingController _controller = TextEditingController();
-  final List<String> _comentarios = [
+  final List<String> _comments = [
     '¡Excelente Wing, me trataron muy bien durante mi trabajo!',
     'Las dificultades por las que pasan los agentes son exageradas',
     'No hablen con el Manager... es una persona rara'
   ];
 
-  void _agregarComentario() {
+  void _addComment() {            //la verdad no decidi darme mala vida y deje que se perdieran al salir de la pantalla
     final texto = _controller.text.trim();
     if (texto.isEmpty) return;
     setState(() {
-      _comentarios.insert(0, texto);
+      _comments.insert(0, texto);
       _controller.clear();
     });
   }
@@ -61,7 +61,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
                     backgroundColor: Theme.of(context).colorScheme.surface,
                     child: IconButton(
                       icon: Icon(Icons.send, color: Theme.of(context).colorScheme.secondary),
-                      onPressed: _agregarComentario,
+                      onPressed: _addComment,
                     ),
                   ),
                 ],
@@ -76,11 +76,11 @@ class _CommentsScreenState extends State<CommentsScreen> {
                 child: ListTile(
                   leading: CircleAvatar(backgroundColor: Theme.of(context).colorScheme.surface, 
                   child: Icon(Icons.person, color: Theme.of(context).colorScheme.secondary)),
-                  title: Text('Usuario ${_comentarios.length - index}'),
-                  subtitle: Text(_comentarios[index]),
+                  title: Text('Usuario ${_comments.length - index}'),
+                  subtitle: Text(_comments[index]),
                 ),
               ),
-              childCount: _comentarios.length,
+              childCount: _comments.length,
             ),
           ),
         ],
