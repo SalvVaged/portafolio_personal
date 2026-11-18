@@ -72,7 +72,7 @@ class ExeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Ejecutivos'),
+      appBar: const CustomAppBar(title: 'Ejecutivos'),
       body: FooterScrollView(
         slivers: [
           SliverToBoxAdapter(

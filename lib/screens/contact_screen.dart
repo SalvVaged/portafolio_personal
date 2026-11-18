@@ -10,7 +10,7 @@ class ContactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
-        titulo: 'Firma del Desarrollador',
+        title: 'Firma del Desarrollador',
         showButtonContact: false,
       ),
       body: FooterScrollView(

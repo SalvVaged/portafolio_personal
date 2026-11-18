@@ -52,7 +52,7 @@ class AbnoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Anomalias'),
+      appBar: const CustomAppBar(title: 'Anomalias'),
       body: FooterScrollView(
         slivers: [
           SliverToBoxAdapter(

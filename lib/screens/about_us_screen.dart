@@ -8,7 +8,7 @@ class AboutUsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Sobre Nosotros'),
+      appBar: const CustomAppBar(title: 'Sobre Nosotros'),
       body: FooterScrollView(
         slivers: [
           SliverToBoxAdapter(

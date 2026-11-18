@@ -35,7 +35,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Comentarios'),
+      appBar: const CustomAppBar(title: 'Comentarios'),
       body: FooterScrollView(
         slivers: [
           SliverToBoxAdapter(

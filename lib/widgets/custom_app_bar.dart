@@ -2,12 +2,12 @@ import 'package:material_ui/material_ui.dart';
 import '../routes/app_routes.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String titulo;
+  final String title;
   final bool showButtonContact;
 
   const CustomAppBar({
     super.key,
-    required this.titulo,
+    required this.title,
     this.showButtonContact = true,
   });
 
@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(titulo),
+      title: Text(title),
       actions: [
         if (showButtonContact)
           IconButton(

@@ -53,7 +53,7 @@ class RiskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Niveles de Riesgo'),
+      appBar: const CustomAppBar(title: 'Niveles de Riesgo'),
       body: FooterScrollView(
         slivers: [
           SliverToBoxAdapter(

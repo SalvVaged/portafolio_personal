@@ -9,7 +9,7 @@ class Employees extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Empleados'),
+      appBar: const CustomAppBar(title: 'Empleados'),
       body: FooterScrollView(
         slivers: [
           SliverFillRemaining(

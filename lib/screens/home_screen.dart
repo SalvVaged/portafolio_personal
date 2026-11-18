@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titulo: 'Portafolio'),
+      appBar: const CustomAppBar(title: 'Portafolio'),
       body: FooterScrollView(
         slivers: [
           SliverToBoxAdapter(
