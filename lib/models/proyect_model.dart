@@ -1,29 +1,33 @@
 import 'package:material_ui/material_ui.dart';
 
-class HobbyModel {
-  final String titulo;
-  final String descripcion;
-  final IconData icono;
+class RiskModel {
+  final String title;
+  final String description;
+  final IconData? icon;
+  final String? iconAsset;
+  final Color titleColor;
 
-  const HobbyModel({
-    required this.titulo,
-    required this.descripcion,
-    required this.icono,
+  const RiskModel({
+    required this.title,
+    required this.description,
+    this.icon,
+    this.iconAsset,
+    required this.titleColor
   });
 }
 
 class SectionModel {
-  final String titulo;
-  final String subtitulo;
-  final IconData? icono;
-  final String? iconoAsset;
+  final String title;
+  final String subtitle;
+  final IconData? icon;
+  final String? iconAsset;
   final VoidCallback onTap;
 
   const SectionModel({
-    required this.titulo,
-    required this.subtitulo,
-    this.icono,
-    this.iconoAsset,
+    required this.title,
+    required this.subtitle,
+    this.icon,
+    this.iconAsset,
     required this.onTap,
   });
 }
